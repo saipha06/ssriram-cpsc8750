@@ -1,6 +1,6 @@
-# fly.toml file generated for clemson-ssriram on 2022-10-02T14:32:30-04:00
+# fly.toml file generated for billowing-wildflower-942 on 2022-10-09T23:45:50-04:00
 
-app = "clemson-ssriram"
+app = "billowing-wildflower-942"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []

@@ -37,7 +37,7 @@ app.get('/', (req, res) => {
   }
   else{
     res.cookie('visitorId', nextVisitorId++);
-    visitorId = res.cookies.visitorId;
+    visitorId = nextVisitorId;
   res.cookie('visited', Date.now().toString());
   text = 'You have never visited!'
 
