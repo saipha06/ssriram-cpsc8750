@@ -42,23 +42,13 @@ app.get('/', (req, res) => {
   text = 'You have never visited!'
 
   }
-  res.send(`
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <title>An Example Title</title>
-      <link rel="stylesheet" href="app.css">
-    </head>
-    <body>
-      <h1>Hello, World</h1>
-      <p>This site was accessed at ${encode(date)},<span style="text-transform: uppercase;"> ${encode(time)}</span> </p>
-      <p> You are vistor # ${encode(visitorId)}</p>
-      <p>${encode(text)}</p>
-
-    </body>
-  </html>
-  `);
+  res.render('welcome', {
+    name: req.query.name || "World",
+    date:date,
+    time:time,
+    text:text,
+    visitorId:visitorId
+  });
 });
 
 // Start listening for network connections
