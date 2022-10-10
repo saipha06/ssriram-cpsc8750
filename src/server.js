@@ -36,8 +36,8 @@ app.get('/', (req, res) => {
     text = 'It has been '+diff+' seconds since your last visit'
   }
   else{
-    res.cookie('visitorId', nextVisitorId++);
     visitorId = nextVisitorId;
+    res.cookie('visitorId', nextVisitorId++);
   res.cookie('visited', Date.now().toString());
   text = 'You have never visited!'
 
